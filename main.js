@@ -39,7 +39,9 @@ async function post() {
 }
 
 // check if isPost is present in the action state
+core.info(`getPost = ${core.getState('isPost')}`);
 const isPost = !!core.getState('isPost')
+core.info(`isPost = ${isPost}`);
 
 if (!isPost) {
     run()
